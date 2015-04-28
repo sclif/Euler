@@ -1,3 +1,5 @@
+library euler.pandigital;
+
 class Pandigital{
   static bool isPandigital(int n){
     String s = n.toString();

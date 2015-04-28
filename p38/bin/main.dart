@@ -1,7 +1,6 @@
 // Copyright (c) 2015, <your name>. All rights reserved. Use of this source code
 // is governed by a BSD-style license that can be found in the LICENSE file.
 
-import 'package:p38/p38.dart' as p38;
 import 'package:euler/pandigital.dart';
 
 main() {

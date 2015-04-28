@@ -8,14 +8,9 @@ import 'package:euler/euler.dart';
 
 main() {
   group('A pandigital group of tests', () {
-    Awesome awesome;
 
-    setUp(() {
-      awesome = new Awesome();
-    });
-
-    test('First Test', () {
-      expect(awesome.isAwesome, isTrue);
+    test('Pandigital 123456', () {
+      expect(Pandigital.isPandigital(123456), isTrue);
     });
   });
 }
