@@ -1,12 +1,11 @@
-name: p38
+name: p37
 version: 0.0.1
-description: A minimal command-line application.
+description: A sample command-line application.
 #author: <your name> <email@example.com>
 #homepage: https://www.example.com
 environment:
   sdk: '>=1.0.0 <2.0.0'
-dependencies:
-  euler:
-    path: 'd:/projects/dart/euler/euler'
+#dependencies:
+#  foo_bar: '>=1.0.0 <2.0.0'
 dev_dependencies:
   unittest: any
