@@ -27,7 +27,7 @@ main() {
 
 int getMaxPandi(List<int> ascSorted){
   for(int i = ascSorted.length - 1; i >= 0; i--){
-    if(Pandigital.isPandigital(ascSorted[i])){
+    if(Number.isPandigital(ascSorted[i])){
       return ascSorted[i];
     }
     else{

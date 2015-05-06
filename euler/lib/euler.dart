@@ -3,4 +3,5 @@
 /// This is an Euler problems useful functions library.
 library euler;
 
-export 'src/pandigital.dart';
+export 'src/number.dart';
+export 'src/word.dart';

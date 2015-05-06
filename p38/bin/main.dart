@@ -5,12 +5,12 @@ import 'package:euler/euler.dart';
 
 main() {
   for(int i = 9182; i < 10000; i++){
-    if(i%10 == 0 || Pandigital.isPandigital(i) == false){
+    if(i%10 == 0 || Number.isPandigital(i) == false){
       continue;
     }
     int n = i*100002;
     print(n);
-    if(Pandigital.isPandigital(n)){
+    if(Number.isPandigital(n)){
       print('$n : PANDIGITAL');
     }
   }

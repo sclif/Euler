@@ -9,7 +9,7 @@ main() {
   for(int i = 1; i < 100; i++){
     for(int j = 1000~/i; j <= 10000~/i; j++){
       int n = int.parse('$i$j${i*j}');
-      if(n >= 123456789 && Pandigital.isPandigital(n)){
+      if(n >= 123456789 && Number.isPandigital(n)){
         print('$i x $j = ${i*j}');
         if(total.contains(i*j)){
           print('^ NOT INCLUDED');
