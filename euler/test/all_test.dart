@@ -47,4 +47,20 @@ main() {
       expect(Number.isTriangle(22), isFalse);
     });
   });
+
+  group('A pentagon group of tests', (){
+    test('Pentagon 22', (){
+      expect(Number.isPentagon(22), isTrue);
+    });
+    test('Pentagon 145', (){
+      expect(Number.isPentagon(145), isTrue);
+    });
+
+    test('Pentagon 142', (){
+      expect(Number.isPentagon(142), isFalse);
+    });
+    test('Pentagon 112', (){
+      expect(Number.isPentagon(112), isFalse);
+    });
+  });
 }
