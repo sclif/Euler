@@ -47,4 +47,20 @@ main() {
       expect(Number.isTriangle(22), isFalse);
     });
   });
+
+  group('A hexagon group of tests', () {
+    test('Hexagon 28', () {
+      expect(Number.isHexagon(28), isTrue);
+    });
+    test('Hexagon 45', () {
+      expect(Number.isHexagon(45), isTrue);
+    });
+
+    test('Hexagon 25', () {
+      expect(Number.isHexagon(25), isFalse);
+    });    
+    test('Hexagon 55', () {
+      expect(Number.isHexagon(55), isFalse);
+    });
+  });
 }

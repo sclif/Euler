@@ -27,4 +27,13 @@ class Number{
     }
     return r.isOdd;
   }
+
+  static bool isHexagon(int n){
+    double root = sqrt(n*8 + 1);
+    int r = root.toInt();
+    if(root - r > 0){
+      return false;
+    }
+    return (r + 1) % 4 == 0;
+  }
 }
