@@ -79,5 +79,4 @@ main() {
       expect(Number.isHexagon(55), isFalse);
     });
   });
-
 }

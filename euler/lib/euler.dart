@@ -5,3 +5,4 @@ library euler;
 
 export 'src/number.dart';
 export 'src/word.dart';
+export 'src/divisors.dart';

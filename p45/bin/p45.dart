@@ -1,21 +1,24 @@
 import 'package:euler/euler.dart';
 
 main() {
-  int limit = 1000, n = 5;
+  int n = 989, r1 = 0, r2 = 0;
   do{
-    checkCombinedon(n);
-    checkCombinedon(n+2);
     n += 6;
-  } while (n < limit);
+    r1 = checkCombinedon(n);
+    r2 = checkCombinedon(n+2);
+  } while (r1 == 0 && r2 == 0);
+  print('$n => $r1 $r2');
 }
 
-void checkCombinedon(int t){
+int checkCombinedon(int t){
+  int result = 0;
   int pr = (t - 1)*(t + 1);
   if(pr % 24 != 0){
     print('ooooopsie, something is fundamentally wrong in your assumptions, master ..!.,');
   }
   int p = pr ~/ 24;
-  if(Number.isTriangle(p)/* && Number.isPentagon(p)*/ && Number.isHexagon(p)){
-    print(p);
+  if(Number.isTriangle(p) && Number.isPentagon(p) && Number.isHexagon(p)){
+    result = p;
   }
+  return result;
 }

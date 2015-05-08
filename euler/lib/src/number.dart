@@ -21,28 +21,25 @@ class Number {
 
   static bool isTriangle(int n) {
     double root = sqrt(n * 8 + 1);
-    int r = root.toInt();
-    if (root - r > 0) {
+    if (root%1 != 0) {
       return false;
     }
-    return r.isOdd;
+    return root.toInt().isOdd;
   }
 
   static bool isPentagon(int n) {
     double root = sqrt(n * 24 + 1);
-    int r = root.toInt();
-    if (root - r > 0) {
+    if (root%1 != 0) {
       return false;
     }
-    return (r + 1) % 6 == 0;
+    return (root.toInt() + 1) % 6 == 0;
   }
 
   static bool isHexagon(int n){
     double root = sqrt(n*8 + 1);
-    int r = root.toInt();
-    if(root - r > 0){
+    if(root%1 != 0){
       return false;
     }
-    return (r + 1) % 4 == 0;
+    return (root.toInt() + 1) % 4 == 0;
   }
 }
