@@ -23,7 +23,6 @@ main() {
     .takeWhile((value) => result.length == 0 && int.parse(value) < 1000000)
     .listen((a) => continueSearch(int.parse(a)), onDone: (){
       print(result);
-      //print(primes);
     });
 }
 
@@ -59,8 +58,5 @@ void continueSearch(int limit){
 int getNOfDistDivs(int a){
   List<int> divs = Divs.getDivisorsFrom(a, primes);
   int result = Divs.getNumberOfDistinct(divs);
-  /*if(result == 4){
-    print('$a = $divs');
-  }*/
   return result;
 }
