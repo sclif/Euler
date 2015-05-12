@@ -42,4 +42,38 @@ class Number {
     }
     return (root.toInt() + 1) % 4 == 0;
   }
+
+  static bool isConsistingOf(int n, List<int> digits){
+    var tmp = new List<int>.from(digits);
+    while(n > 9){
+      int r = n.remainder(10);
+      int idx = tmp.indexOf(r);
+      if(idx == -1){
+        return false;
+      }
+      tmp.removeAt(idx);
+      n = n ~/ 10;
+    }
+    return tmp.length == 1 && tmp[0] == n;
+  }
+
+  static List<int> getDigits(int n) {
+    List<int> result = [];
+    do{
+      int r = n.remainder(10);
+      result.add(r);
+      n = n ~/ 10;
+    } while (n > 9);
+    result.add(n);
+    return result;
+  }
+
+  static int fromDigits(List<int> digits){
+    int n = 0;
+    for(int i = digits.length - 1, j = 1; i >= 0; i--, j *= 10){
+      int d = digits[i];
+      n += d*j;
+    }
+    return n;
+  }
 }

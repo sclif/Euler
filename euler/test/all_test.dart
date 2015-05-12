@@ -79,4 +79,23 @@ main() {
       expect(Number.isHexagon(55), isFalse);
     });
   });
+
+  group('A Consisting of group of tests', (){
+    test('13579', (){
+      expect(Number.isConsistingOf(13579, [1,3,5,7,9]), isTrue);
+    });
+    test('2506559', (){
+      expect(Number.isConsistingOf(2506559, [2,0,5,5,5,6,9]), isTrue);
+    });
+
+    test('false 13579', (){
+      expect(Number.isConsistingOf(13579, [1,3,7,9]), isFalse);
+    });
+    test('false 13579', (){
+      expect(Number.isConsistingOf(13579, [1,3,7,9,5,1]), isFalse);
+    });
+    test('false 13579', (){
+      expect(Number.isConsistingOf(13579, [1,3,5,7,8]), isFalse);
+    });
+  });
 }
