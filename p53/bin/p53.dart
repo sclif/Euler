@@ -5,24 +5,22 @@ main(){
   int top = 100;
   int c = 0;
 
-  for(int r = 1; r <= top ~/ 2; r++){
-    for(int k = 1; k <= ; k++)
-  }
-  for(int n = 24; n <= top; n++){
-    int N = n ~/2;
+  for(int n = 23; n <= top; n++){
+    int N = n ~/ 2;
     for(int r = 1; r <= N; r++){
       int a = C(r, n - r);
       if (a > limit){
         if(n % 2 == 1){
-          c += (N - r)*2;
+          c += (N - r + 1)*2;
         } else {
-          c += (N - r)*2 - 1;
+          c += (N - r)*2 + 1;
         }
+        //print('$c [C($n, $r) => $a]');
         break;
       }
     }
   }
-  print(c + 4);
+  print(c);
 }
 
 int C(int r, int k){
