@@ -1,7 +1,7 @@
 // Copyright (c) 2015, <your name>. All rights reserved. Use of this source code
 // is governed by a BSD-style license that can be found in the LICENSE file.
 
-import 'package:p49/p49.dart' as p49;
+import 'package:euler/euler.dart';
 import 'dart:io';
 import 'dart:convert';
 
@@ -23,9 +23,9 @@ main() {
 }
 
 void addToGroup(int n){
-  List<int> digits = p49.getDigits(n);
+  List<int> digits = Number.getDigits(n);
   digits.sort();
-  int sorted = p49.fromDigits(digits);
+  int sorted = Number.fromDigits(digits);
   if(_map.containsKey(sorted)){
     _map[sorted].add(n);
   } else {
