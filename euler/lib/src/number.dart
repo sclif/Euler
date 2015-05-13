@@ -63,8 +63,7 @@ class Number {
       int r = n.remainder(10);
       result.insert(0, r);
       n = n ~/ 10;
-    } while (n > 9);
-    result.insert(0, n);
+    } while (n > 0);
     return result;
   }
 
