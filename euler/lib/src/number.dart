@@ -61,10 +61,10 @@ class Number {
     List<int> result = [];
     do{
       int r = n.remainder(10);
-      result.add(r);
+      result.insert(0, r);
       n = n ~/ 10;
     } while (n > 9);
-    result.add(n);
+    result.insert(0, n);
     return result;
   }
 
@@ -75,5 +75,11 @@ class Number {
       n += d*j;
     }
     return n;
+  }
+
+  static int revert(int n){
+    var digits = getDigits(n);
+    int r = fromDigits(digits.reversed.toList());
+    return r;
   }
 }
