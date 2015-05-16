@@ -28,17 +28,40 @@ Map<String, Set<int>> findDupes(String s){
 List<String> buildTemplates(String s, Map<String, Set<int>> map) {
   List<String> result = [];
   map.forEach((k,v){
-    for(int i = 0; i < v.length; i++){
-      for(int j = i+1; j < v.length; j++){
-        StringBuffer sb = new StringBuffer(s.substring(0, v.elementAt(i)));
-        sb.write('*');
-        sb.write(s.substring(v.elementAt(i) + 1, v.elementAt(j)));
-        sb.write('*');
-        sb.write(s.substring(v.elementAt(j) + 1));
-
-        result.add(sb.toString());
+    for(int limit = 2; limit <= v.length; limit++){
+      for(int i = 0; i <= v.length - limit; i++) {
+        var r = buildIndexes(limit, i, [], v);
+        r.forEach((idx) => result.add(buildTemplate(s, idx)));
       }
     }
   });
   return result;
+}
+
+List<List<int>> buildIndexes(int len, int idx, List<int> list, Set<int> base){
+  int next = base.elementAt(idx);
+  list.add(next);
+  if(list.length == len){
+    return [list];
+  }
+  var result = new List<List<int>>();
+  for(int i = idx + 1; i <= base.length - len + list.length; i++){
+    var r = buildIndexes(len, i, new List<int>.from(list), base);
+    r.forEach((item) => result.add(item));
+  }
+  return result;
+}
+
+String buildTemplate(String s, List<int> indexes){
+  int i = 0;
+  int start = 0;
+  StringBuffer sb = new StringBuffer();
+  do{
+    int idx = indexes[i++];
+    sb.write(s.substring(start, idx));
+    sb.write('*');
+    start = idx + 1;
+  }while(i < indexes.length);
+  sb.write(s.substring(start));
+  return sb.toString();
 }
