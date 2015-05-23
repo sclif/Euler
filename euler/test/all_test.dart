@@ -43,8 +43,24 @@ main() {
     test('Triangle 65', () {
       expect(Number.isTriangle(65), isFalse);
     });
-    test('Triangle 21', () {
+    test('Triangle 22', () {
       expect(Number.isTriangle(22), isFalse);
+    });
+  });
+
+  group('A square group of tests', (){
+    test('square 49', () {
+      expect(Number.isSquare(49), isTrue);
+    });
+    test('square 25', () {
+      expect(Number.isSquare(25), isTrue);
+    });
+
+    test('square 65', () {
+      expect(Number.isSquare(65), isFalse);
+    });
+    test('square 22', () {
+      expect(Number.isSquare(22), isFalse);
     });
   });
 
@@ -63,7 +79,7 @@ main() {
       expect(Number.isPentagon(112), isFalse);
     });
   });
-  
+
   group('A hexagon group of tests', () {
     test('Hexagon 28', () {
       expect(Number.isHexagon(28), isTrue);
@@ -74,9 +90,41 @@ main() {
 
     test('Hexagon 25', () {
       expect(Number.isHexagon(25), isFalse);
-    });    
+    });
     test('Hexagon 55', () {
       expect(Number.isHexagon(55), isFalse);
+    });
+  });
+
+  group('A heptagon group of tests', () {
+    test('Heptagon 18', () {
+      expect(Number.isHeptagon(18), isTrue);
+    });
+    test('Heptagon 55', () {
+      expect(Number.isHeptagon(55), isTrue);
+    });
+
+    test('Heptagon 25', () {
+      expect(Number.isHeptagon(25), isFalse);
+    });
+    test('Heptagon 56', () {
+      expect(Number.isHeptagon(56), isFalse);
+    });
+  });
+
+  group('An Octagon group of tests', () {
+    test('Octagon 21', () {
+      expect(Number.isOctagon(21), isTrue);
+    });
+    test('Octagon 65', () {
+      expect(Number.isOctagon(65), isTrue);
+    });
+
+    test('Octagon 25', () {
+      expect(Number.isOctagon(25), isFalse);
+    });
+    test('Octagon 56', () {
+      expect(Number.isOctagon(56), isFalse);
     });
   });
 

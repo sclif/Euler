@@ -27,6 +27,10 @@ class Number {
     return root.toInt().isOdd;
   }
 
+  static bool isSquare(int n){
+    return sqrt(n)%1 == 0;
+  }
+
   static bool isPentagon(int n) {
     double root = sqrt(n * 24 + 1);
     if (root%1 != 0) {
@@ -41,6 +45,22 @@ class Number {
       return false;
     }
     return (root.toInt() + 1) % 4 == 0;
+  }
+
+  static bool isHeptagon(int n){
+    double root = sqrt(n*40 + 9);
+    if(root%1 != 0){
+      return false;
+    }
+    return (root.toInt() + 3) % 10 == 0;
+  }
+
+  static bool isOctagon(int n){
+    double root = sqrt(n*3 + 1);
+    if(root%1 != 0){
+      return false;
+    }
+    return (root.toInt() + 1) % 3 == 0;
   }
 
   static bool isConsistingOf(int n, List<int> digits){
