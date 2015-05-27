@@ -101,4 +101,41 @@ class Number {
     int r = fromDigits(digits.reversed.toList());
     return r;
   }
+
+  static List<int> getSqrtContinuedFractions(int n){
+    double root = sqrt(n);
+    int m = root.toInt();
+    List<int> result = [m];
+    if(root != m){
+      int denom = 1, mCopy = m;
+      while(true){
+        int a = denom ~/ (root - m);
+        denom = (n - m*m) ~/ denom;
+        m = denom*a - m;
+        result.add(a);
+        if(denom == 1 && m == mCopy){
+          return result;
+        }
+      }
+    }
+    return result;
+  }
+
+  static Fraction calculateFractionFromCF(List<int> cf){
+    int b = 1, d = cf.last;
+    for(int i = cf.length - 2; i > 0; i--){
+      int a = cf[i];
+      int tmp = a*d + b;
+      b = d;
+      d = tmp;
+    }
+    return new Fraction(cf.first*d + b, d);
+  }
 }
+
+class Fraction{
+  int numerator;
+  int denominator;
+
+  Fraction(this.numerator, this.denominator)
+;}

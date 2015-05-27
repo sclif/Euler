@@ -146,4 +146,35 @@ main() {
       expect(Number.isConsistingOf(13579, [1,3,5,7,8]), isFalse);
     });
   });
+
+  group('A getSqrtContinuedFractions of group of tests', (){
+    test('13', (){
+      expect(Number.getSqrtContinuedFractions(13), [3, 1, 1, 1, 1, 6]);
+    });
+    test('25', (){
+      expect(Number.getSqrtContinuedFractions(25), [5]);
+    });
+    test('23', (){
+      expect(Number.getSqrtContinuedFractions(23), [4,1,3,1,8]);
+    });
+    test('1', (){
+      expect(Number.getSqrtContinuedFractions(1), [1]);
+    });
+    test('79', (){
+      expect(Number.getSqrtContinuedFractions(79), [8,1,7,1,16]);
+    });
+  });
+
+  group('A calculateFractionFromCF of group of tests', (){
+    test('[2, 1, 2, 1, 1, 4, 1, 1, 6]', (){
+      var f = Number.calculateFractionFromCF([2, 1, 2, 1, 1, 4, 1, 1, 6]);
+      expect(f.numerator, 1264);
+      expect(f.denominator, 465);
+    });
+    test('[1,2,2,2,2]', (){
+      var f = Number.calculateFractionFromCF([1,2,2,2,2]);
+      expect(f.numerator, 41);
+      expect(f.denominator, 29);
+    });
+  });
 }
