@@ -7,6 +7,6 @@ environment:
   sdk: '>=1.0.0 <2.0.0'
 dependencies:
   euler:
-    path: 'c:/projects/dart/euler/euler'
+    path: 'd:/projects/dart/euler/euler'
 dev_dependencies:
   unittest: any

@@ -171,6 +171,16 @@ main() {
       expect(f.numerator, 1264);
       expect(f.denominator, 465);
     });
+    test('[2, 1, 2, 1, 1, 4, 1, 1]', (){
+      var f = Number.calculateFractionFromCF([2, 1, 2, 1, 1, 4, 1, 1]);
+      expect(f.numerator, 193);
+      expect(f.denominator, 71);
+    });
+    test('[2, 1, 2, 1, 1, 4, 1]', (){
+      var f = Number.calculateFractionFromCF([2, 1, 2, 1, 1, 4, 1]);
+      expect(f.numerator, 106);
+      expect(f.denominator, 39);
+    });
     test('[1,2,2,2,2]', (){
       var f = Number.calculateFractionFromCF([1,2,2,2,2]);
       expect(f.numerator, 41);
