@@ -32,6 +32,6 @@ int findMinimalX(int d){
     } else {
       next.add(cf[len++ % cf.length]);
     }
-  } while(!found && len < 30);
+  } while(!found);
   return x;
 }
