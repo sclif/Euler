@@ -1,0 +1,13 @@
+name: p74
+version: 0.0.1
+description: A sample command-line application.
+#author: <your name> <email@example.com>
+#homepage: https://www.example.com
+environment:
+  sdk: '>=1.0.0 <2.0.0'
+dependencies:
+  euler:
+    path: 'd:/projects/dart/euler/euler'
+  neo4j_dart:
+dev_dependencies:
+  unittest: any
