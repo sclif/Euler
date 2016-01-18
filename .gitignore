@@ -14,6 +14,7 @@ packages
 pubspec.lock
 
 #.idea fix
-**/.idea/*.xml
+**/.idea/**/*.xml
 **/.idea/*.iml
 **/.idea/*.name
+**/.packages
