@@ -53,6 +53,7 @@ class Dijkstra{
     }
     if(_ff(next, _grid)){
       _path = path;
+      _initSum = null;
       return;
     }
     var options = _crawler.getMoveOptions(_grid, path);
