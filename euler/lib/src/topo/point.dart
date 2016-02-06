@@ -24,7 +24,14 @@ class Point{
     return new Point(x, y + 1);
   }
 
+  @override
   String toString(){
     return "$x:$y";
   }
+
+  @override
+  bool operator ==(o) => o is Point && o.x == this.x && o.y == this.y;
+
+  @override
+  int get hashCode => hash2(this.x.hashCode, this.y.hashCode);
 }
