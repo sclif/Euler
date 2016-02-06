@@ -137,5 +137,5 @@ class Fraction{
   int numerator;
   int denominator;
 
-  Fraction(this.numerator, this.denominator)
-;}
+  Fraction(this.numerator, this.denominator);
+}
